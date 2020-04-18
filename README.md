@@ -1,2 +1,126 @@
-# country-location-timezone
-get countries list , states, lat , lng and time zones
+country-location-timezone
+==============================
+Basic library for Country list and those state with lat and long, timezones
+
+
+# Install
+`npm i country-location-timezone`
+
+# Usage
+
+## Latest Release : `v1.0.0`
+  - ES6 Module usage
+   
+     ```js
+     import csc from 'country-location-timezone'
+
+     // Import Interfaces`
+     import { ICountry, IState, IZoneOffset } from 'country-location-timezone'
+     ```
+  - AMD Module usage
+  
+    ```js
+    let csc = require('country-location-timezone').default
+    ```
+
+# Docs
+
+getCountryByCode(code)
+---------------
+
+It accepts a valid `CountryCode` eg: `'AS'` and   returns *Country Details*
+
+type: **json | ICountry**
+
+```js
+{
+	"id": "4",
+	"sortname": "AS",
+	"name": "American Samoa",
+	"phonecode": "1684"
+}
+```
+
+getCountryById(id)
+---------------
+
+It accepts a valid `CountryId` and   returns *Country Details*
+
+type: **json | ICountry**
+
+```js
+{
+	"id": "4",
+	"sortname": "AS",
+	"name": "American Samoa",
+	"phonecode": "1684"
+}
+```
+
+getStateById(id)
+---------------
+
+It accepts a valid `StateId` and   returns *State Details*
+
+type: **json | IState**
+
+```js
+{"id":"1","name":"Andaman and Nicobar Islands","country_id":"101","lat":"20.0000","lng":"77.0000"}
+```
+
+getStatesOfCountry(countryId)
+---------------
+
+It accepts a valid `CountryId` and   returns *all States* as Array of JSON
+
+type: **array of json | IState**
+
+```js
+[
+  {"id":"1","name":"Andaman and Nicobar Islands","country_id":"101","lat":"20.0000","lng":"77.0000"}
+]
+
+```
+
+getAllCountries
+---------------
+It returns **all Countries**
+
+type: **array of json | ICountry**
+
+```js
+[
+  {
+    "id": "4",
+    "sortname": "AS",
+    "name": "American Samoa",
+    "phonecode": "1684"
+  }
+]
+```
+
+getAllZonesOffset
+---------------
+It returns **all Zoneoffset**
+
+type: **array of json | IZoneOffset**
+
+```js
+[
+  {"text":"UTC-12:00","offset":"-12","abbr":"DST"}
+]
+```
+
+getZoneByAbbr(abbr)
+---------------
+
+It accepts a valid `abbr` and   returns *all Zones* as Array of JSON
+
+type: **array of json | IZoneOffset**
+
+```js
+[
+  {"text":"UTC-12:00","offset":"-12","abbr":"DST"}
+]
+
+```
