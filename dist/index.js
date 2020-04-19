@@ -19,9 +19,23 @@ exports.default = {
         });
         return states.sort(compare);
     },
+	getLocaleStatesOfCountry: function (lng, countryId) {
+		
+		var lng_state_json_1 = __importDefault(require("./lib/" + lng + "_state.json"));
+		
+        var states = lng_state_json_1.default.filter(function (value, index) {
+            return value.country_id === countryId;
+        });
+        return states.sort(compare);
+    },
     getAllCountries: function () {
         return country_json_1.default;
     },
+	getAllLocaleCountries: function(lng)
+	{
+		var lng_country_json_1 = __importDefault(require("./lib/" + lng + "_country.json"));
+		return lng_country_json_1.default;
+	},
     getCountryByCode: function (code) {
         return _findEntryByCode(country_json_1.default, code);
     },
