@@ -8,7 +8,7 @@ Basic library for Country list and those state with lat and long, timezones
 
 # Usage
 
-## Latest Release : `v1.0.1`
+## Latest Release : `v1.0.2`
   - ES6 Module usage
    
      ```js
