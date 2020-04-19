@@ -8,7 +8,7 @@ Basic library for Country list and those state with lat and long, timezones
 
 # Usage
 
-## Latest Release : `v1.0.0`
+## Latest Release : `v1.0.1`
   - ES6 Module usage
    
      ```js
@@ -81,9 +81,42 @@ type: **array of json | IState**
 ]
 
 ```
+getLocaleStatesOfCountry(lng,countryId)
+---------------
+
+It accepts a valid `CountryId`, `lng` and   returns *all States* as Array of JSON
+you need to add <lng>_state.json as your locale
+
+type: **array of json | IState**
+
+```js
+[
+  {"id":"1","name":"Andaman and Nicobar Islands","country_id":"101","lat":"20.0000","lng":"77.0000"}
+]
+
+```
 
 getAllCountries
 ---------------
+It returns **all Countries**
+
+type: **array of json | ICountry**
+
+```js
+[
+  {
+    "id": "4",
+    "sortname": "AS",
+    "name": "American Samoa",
+    "phonecode": "1684"
+  }
+]
+```
+
+getAllLocaleCountries(lng)
+---------------
+It accepts a valid `lng`
+you need to add <lng>_country.json as your locale
 It returns **all Countries**
 
 type: **array of json | ICountry**
