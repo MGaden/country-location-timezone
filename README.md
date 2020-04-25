@@ -1,6 +1,6 @@
 country-location-timezone
 ==============================
-Basic library for Country list and those state with lat and long, timezones
+Basic library for Country list and those states with lat and long, timezones
 
 
 # Install
@@ -8,7 +8,7 @@ Basic library for Country list and those state with lat and long, timezones
 
 # Usage
 
-## Latest Release : `v1.0.3`
+## Latest Release : `v1.0.4`
   - ES6 Module usage
    
      ```js
@@ -33,12 +33,7 @@ It accepts a valid `CountryCode` eg: `'AS'` and   returns *Country Details*
 type: **json | ICountry**
 
 ```js
-{
-	"id": "4",
-	"sortname": "AS",
-	"name": "American Samoa",
-	"phonecode": "1684"
-}
+{"id":"28","name":"Burkina Faso","sortname":"BF","phonecode":"226","lat":"13.0000","lng":"-2.0000"}
 ```
 
 getCountryById(id)
@@ -49,12 +44,7 @@ It accepts a valid `CountryId` and   returns *Country Details*
 type: **json | ICountry**
 
 ```js
-{
-	"id": "4",
-	"sortname": "AS",
-	"name": "American Samoa",
-	"phonecode": "1684"
-}
+{"id":"28","name":"Burkina Faso","sortname":"BF","phonecode":"226","lat":"13.0000","lng":"-2.0000"}
 ```
 
 getStateById(id)
@@ -65,7 +55,7 @@ It accepts a valid `StateId` and   returns *State Details*
 type: **json | IState**
 
 ```js
-{"id":"1","name":"Andaman and Nicobar Islands","country_id":"101","lat":"20.0000","lng":"77.0000"}
+{"id":"4543","name":"Nabatieh","country_id":"99","country_code":"LB","lat":"33.366666666667","lng":"35.483333333333"}
 ```
 
 getStatesOfCountry(countryId)
@@ -77,7 +67,7 @@ type: **array of json | IState**
 
 ```js
 [
-  {"id":"1","name":"Andaman and Nicobar Islands","country_id":"101","lat":"20.0000","lng":"77.0000"}
+  {"id":"4543","name":"Nabatieh","country_id":"99","country_code":"LB","lat":"33.366666666667","lng":"35.483333333333"}
 ]
 
 ```
@@ -91,7 +81,7 @@ type: **array of json | IState**
 
 ```js
 [
-  {"id":"1","name":"Andaman and Nicobar Islands","country_id":"101","lat":"20.0000","lng":"77.0000"}
+  {"id":"2501152","name":"قسنطينة","country_id":"3","country_code":"DZ","lat":"36.365","lng":"6.6147222222222"}
 ]
 
 ```
@@ -104,12 +94,7 @@ type: **array of json | ICountry**
 
 ```js
 [
-  {
-    "id": "4",
-    "sortname": "AS",
-    "name": "American Samoa",
-    "phonecode": "1684"
-  }
+  {"id":"28","name":"Burkina Faso","sortname":"BF","phonecode":"226","lat":"13.0000","lng":"-2.0000"}
 ]
 ```
 
@@ -123,12 +108,7 @@ type: **array of json | ICountry**
 
 ```js
 [
-  {
-    "id": "4",
-    "sortname": "AS",
-    "name": "American Samoa",
-    "phonecode": "1684"
-  }
+  {"id":"11","name":"النمسا","sortname":"AT","phonecode":"43","lat":"47.3333","lng":"13.3333"}
 ]
 ```
 
