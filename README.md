@@ -1,6 +1,6 @@
 country-location-timezone
 ==============================
-Basic library for Country list and those states with lat and long, timezones
+Basic library for Country list and those states with lat, long and timezones
 
 
 # Install
